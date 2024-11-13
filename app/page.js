@@ -1,14 +1,22 @@
-'use client';
+"use client";
 
-import "../styles/globals.css";
-import {useTheme} from './context/ThemeContext';
+import ControlledCarousel from "./components/Carousel";
+// import HomeAdvancedSearch from "./components/HomeAdvancedSearch.js";
+// import FeaturedProperties from "./components/FeaturedProperties.js";
+// import PopularRegions from "./components/PopularRegions.js";
+// import RecentArticle from "./components/RecentArticle.js";
+// import LastMinuteDeals from "./components/LastMinuteDeals.js";
+// import Activity from "./components/Activity.js";
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function HomePage() {
-  const {theme, toggleTheme} = useTheme();
   return (
-    <main className={`min-vh-100 ${theme == 'light' ? 'bg-light text-dark' : 'bg-dark text-light'}`}>
-      <h1>Welcome to the App Router in Next.js 14</h1>
-      <button className="btn btn-primary" onClick={toggleTheme}>Toggle Theme</button>
-    </main>
+    <div id="wrapper">
+
+        <ControlledCarousel />  
+
+    </div>
+    
   );
 }

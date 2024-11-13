@@ -1,70 +1,30 @@
-import "../styles/globals.css";
-import { ThemeProvider } from "./context/ThemeContext";
+// 'use client';
 
-export const metadata = {
-  title: "NM Tafe Next.js App",
-  description: "A modern application built with Next.js and Bulma",
-  openGraph: {
-    title: "My Next.js App",
-    description: "A modern web application built with Next.js",
-    images: [
-      {
-        url: "/logo.png",
-        width: 800,
-        height: 600,
-        alt: "App Logo",
-      },
-    ],
-    siteName: "My Next.js App",
-  },
-};
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import "../styles/globals.css";
+import Header from "./components/Header.js"
+import Footer from "./components/Footer.js";
+// import  HomePage  from "./page.js";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <title>One Ring Rentals - Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,900%7COpen+Sans:400,700,400italic" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/common/modernizr.js"></script>
+  </head>
+
       <body>
-        {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-          <div className="container">
-            <a className="navbar-brand" href="/">
-              My Next.js App
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
-                    Home
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        {/* Main content section */}
-        <ThemeProvider>{children}</ThemeProvider>
-
-        {/* Footer */}
-        <footer className="bg-light text-center py-4 mt-4">
-          <div className="container">
-            <p className="mb-0">
-              © 2024 <strong>My Next.js App</strong>. Built with Next.js and
-              Bootstrap
-            </p>
-          </div>
-        </footer>
+        <Header />
+        { children }
+        <Footer />
       </body>
+
     </html>
   );
 }

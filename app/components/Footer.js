@@ -6,7 +6,7 @@ function Footer( ) {
         <div id="footer-top" className="container">
           <div className="row">
             <div className="block col-sm-3">
-              <a href="#"><img src="images/logo.png" alt="One Ring Rentals"/></a>
+              <a href="#"><img src="/images/logo.png" alt="One Ring Rentals"/></a>
               <br /><br />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
@@ -33,7 +33,7 @@ function Footer( ) {
                       regions.slice(0, 2).map((item) => (
                         <li key={item.id}>
                          <div className="image">
-                          <a href="properties-detail.html"
+                          <a href="#"
                             ><img src="https://placehold.it/760x670" alt=""
                           /></a>
                          </div>

@@ -38,7 +38,7 @@ function Header() {
                 <div className="row">
                 <div className="col-sm-12">
                     <Link href="/" className="nav-logo">
-                       <img src="images/logo.png" alt="One Ring Rentals"/>
+                       <img src="/images/logo.png" alt="One Ring Rentals"/>
                     </Link>
                     <div id="sb-search" className="sb-search">
                     <form>

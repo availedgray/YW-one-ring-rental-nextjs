@@ -1,28 +1,21 @@
-export default function HomePage() {
-  return (
-    <div id="wrapper">
-        <Carousel />
-            <HomeAdvancedSearch />
-            <div className="content">
+import LatestNews from "../components/LatestNews.js"
+
+function News() {
+    return (
+        <div className="content">
                 <div className="container">
                     <div className="row">
 
-                        {/* main content */}
-                        <div className="main col-sm-8">
-                            <FeaturedProperties />
-                            <PopularRegions />
-                            <RecentArticle />
+                        {/* Latest News */}
+                        <div className="main col-sm-12">
+                            <LatestNews />
                         </div>
-
-                        {/* sidebar */}
-                        <div className="sidebar col-sm-4">
-                            <LastMinuteDeals />
-                            <Activity />
-                        </div>                 
+                                       
                     </div>
                 </div>
-            </div>         
-    </div>
-    
-  );
+        </div>  
+    );
+
 }
+
+export default News;

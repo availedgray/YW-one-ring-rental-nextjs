@@ -1,43 +1,36 @@
-import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
+'use client';
+import React from 'react';
+import {useState} from 'react';
+import {slideList} from "../data/slideList"
+import Image from 'next/image';
 
 function ControlledCarousel(){
     const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-      };
+    function handleClick() {
+      setIndex((index + 1) % slideList.length);
+    }
 
+    function handleClickPrevious() {
+      setIndex((index - 1 + slideList.length) % slideList.length);
+    }
+
+    let slide = slideList[index];
     return(
         <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner" role="listbox">
 
             <div className="item active" 
-                id="slide1" 
+                id={slide.id} 
                 style={{
-                background: 'url(http://placehold.it/1920x605) no-repeat left center',
+                // background: `#202833 url(${slide.background}) no-repeat left center`,
+                background: '#202833',
                 backgroundSize: 'cover'
             }}>
                 <div className="carousel-caption">
-                    <div className="caption sfr slider-title">Breathtaking views</div>
+                    <div className="caption sfr slider-title">{slide.title}</div>
                     <div className="caption sfl slider-subtitle">
-                        Relaxation in the Bay of Belfalas
-                    </div>
-                    <a href="#" className="caption sfb btn btn-default btn-lg">
-                        Learn More</a>
-                </div>
-            </div>
-
-            <div className="item" 
-                id="slide2"
-                style={{
-                background: 'url(http://placehold.it/1920x605) no-repeat left center',
-                backgroundSize: 'cover'
-            }}>
-                <div className="carousel-caption">
-                    <div className="caption sfr slider-title">The simple life</div>
-                    <div className="caption sfl slider-subtitle">
-                        Lush gardens in Mordor
+                        {slide.caption}
                     </div>
                     <a href="#" className="caption sfb btn btn-default btn-lg">
                         Learn More</a>
@@ -46,11 +39,11 @@ function ControlledCarousel(){
         </div>
         <div id="home-search-section"></div>
 
-        <a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <a className="left carousel-control" href="#carousel-example-generic" role="button" onClick={handleClick} data-slide="prev">
             <span className="glyphicon glyphicon-chevron-left"></span>
             <span className="sr-only">Previous</span>
         </a>
-        <a className="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <a className="right carousel-control" href="#carousel-example-generic" role="button" onClick={handleClickPrevious} data-slide="next">
             <span className="glyphicon glyphicon-chevron-right"></span>
             <span className="sr-only">Next</span>
         </a>
@@ -59,3 +52,4 @@ function ControlledCarousel(){
 };
 
 export default ControlledCarousel;
+

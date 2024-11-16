@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 function HomeAdvancedSearch(){
@@ -27,7 +28,8 @@ function HomeAdvancedSearch(){
                     <select
                     id="search_status"
                     name="search_status"
-                    data-placeholder="Stay...">
+                    data-placeholder="Stay..."
+                    >
                     <option value=""></option>
                     <option value="1">1 Night</option>
                     <option value="2">2 Nights</option>

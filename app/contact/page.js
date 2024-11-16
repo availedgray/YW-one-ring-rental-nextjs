@@ -1,35 +1,17 @@
-import Header from "../components/Header.js"
-import Footer from "../components/Footer.js";
+import ContactForm from "../components/ContactForm";
 
-
-export default function HomePage() {
-  return (
-    <div id="wrapper">
-      <Header />
-        <Carousel />
-            <HomeAdvancedSearch />
+function Contact() {
+    return (
             <div className="content">
                 <div className="container">
                     <div className="row">
-
-                        {/* main content */}
-                        <div className="main col-sm-8">
-                            <FeaturedProperties />
-                            <PopularRegions />
-                            <RecentArticle />
-                        </div>
-
-                        {/* sidebar */}
-                        <div className="sidebar col-sm-4">
-                            <LastMinuteDeals />
-                            <Activity />
-                        </div>                 
+                        {/* contact form */}
+                        <ContactForm />
                     </div>
                 </div>
-            </div>         
+            </div>
+    );
 
-      <Footer />
-    </div>
-    
-  );
 }
+
+export default Contact;

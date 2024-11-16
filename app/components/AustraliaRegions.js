@@ -17,6 +17,12 @@ function AustraliaRegions (){
                                 <span className="location">{item.state}</span>
                               </a>
                               <img src="https://placehold.it/760x670" alt="" />
+                              {/* <Image
+                                src="https://placehold.it/760x670"  
+                                alt={item.city}
+                                width={670} 
+                                height={760}
+                              /> */}
                             </div>
                           </div>
                         )

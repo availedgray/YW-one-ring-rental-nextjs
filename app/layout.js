@@ -1,9 +1,17 @@
-// 'use client';
-
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import "../styles/globals.css";
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js";
+
+export const metadata = {
+  title: "One Ring Rentals - Home",
+  description: "One Ring Rentals site built with Next.js",
+  openGraph: {
+    title: `One Ring Rentals - Home`,
+    description: "A modern web application built with Next.js",
+    siteName: "One Ring Rentals",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -15,7 +23,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,900%7COpen+Sans:400,700,400italic" rel="stylesheet" type="text/css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
-        <script src="js/common/modernizr.js"></script>
+        {/* <script src="js/common/modernizr.js"></script> */}
       </head>
 
       <body>
@@ -25,14 +33,14 @@ export default function RootLayout({ children }) {
         <Footer />
         </div>
 
-        <script src="js/common.js"></script>
+        {/* <script src="js/common.js"></script>
         <script type="text/javascript" src="js/common/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/common/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/common/bootstrap-datepicker.js"></script>
         <script type="text/javascript" src="js/common/chosen.min.js"></script>
         <script type="text/javascript" src="js/common/bootstrap-checkbox.js"></script>
         <script type="text/javascript" src="js/common/jquery-browser.js"></script>
-        <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script> */}
 
 
       </body>

@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,900%7COpen+Sans:400,700,400italic" rel="stylesheet" type="text/css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
-        {/* <script src="js/common/modernizr.js"></script> */}
       </head>
 
       <body>
@@ -32,16 +31,6 @@ export default function RootLayout({ children }) {
         { children }
         <Footer />
         </div>
-
-        {/* <script src="js/common.js"></script>
-        <script type="text/javascript" src="js/common/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="js/common/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/common/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="js/common/chosen.min.js"></script>
-        <script type="text/javascript" src="js/common/bootstrap-checkbox.js"></script>
-        <script type="text/javascript" src="js/common/jquery-browser.js"></script>
-        <script type="text/javascript" src="js/scripts.js"></script> */}
-
 
       </body>
 

@@ -21,7 +21,7 @@ function ControlledCarousel(){
         <div className="carousel-inner" role="listbox">
 
             <div className="item active" 
-                id={slide.id} 
+                id={`slide${slide.id}`}
                 style={{
                 // background: `#202833 url(${slide.background}) no-repeat left center`,
                 background: '#202833',
@@ -32,7 +32,7 @@ function ControlledCarousel(){
                     <div className="caption sfl slider-subtitle">
                         {slide.caption}
                     </div>
-                    <a href="#" className="caption sfb btn btn-default btn-lg">
+                    <a href={slide.id} className="caption sfb btn btn-default btn-lg">
                         Learn More</a>
                 </div>
             </div>
